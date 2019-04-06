@@ -32,6 +32,7 @@ public class WordLadder {
     private static Stack<String> findLadder(String startingWord, String endingWord, Set<String> wordSet) {
         Queue<Stack<String>> queue = new LinkedList<>();
         Stack<String> beginningList = new Stack<>();
+        
         beginningList.push(startingWord);
         queue.offer(beginningList);
         int len = startingWord.length();
