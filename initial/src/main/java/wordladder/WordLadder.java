@@ -21,10 +21,7 @@ public class WordLadder {
         if (checkValidity(this.startingWord, this.endingWord, wordSet) == 1) {
             this.err = true;
         }
-
-//        System.out.printf("starting word:%s\n", this.startingWord);
-//        System.out.printf("ending word:%s\n", this.endingWord);
-
+        
         this.ans = findLadder(this.startingWord, this.endingWord, wordSet);
         this.found = !this.ans.isEmpty();
     }
