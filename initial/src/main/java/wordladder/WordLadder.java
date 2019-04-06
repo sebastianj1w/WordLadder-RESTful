@@ -16,12 +16,16 @@ public class WordLadder {
         if (wordSet.isEmpty()) {
             this.err = true;
             err_message = "word set empty";
+            return;
         }
 
         if (checkValidity(this.startingWord, this.endingWord, wordSet) == 1) {
             this.err = true;
+            return;
         }
-        
+        System.out.println("1162");
+
+
         this.ans = findLadder(this.startingWord, this.endingWord, wordSet);
         this.found = !this.ans.isEmpty();
     }
@@ -59,23 +63,24 @@ public class WordLadder {
     }
 
     private int checkValidity(String start, String end, Set<String> wordSet) {
+        System.out.println("1122");
+        if (start.length() != end.length()) {
+            this.err_message = "length of two words are not equal";
+            return 1;
+        }
+        System.out.println("1133");
         if (!wordSet.contains(start)) {
             this.err_message = "starting word not exits";
             return 1;
         }
-
+        System.out.println("1144");
         if (!wordSet.contains(end)) {
             this.err_message = "ending word not exits";
             return 1;
         }
-
+        System.out.println("1155");
         if (start.equals(end)) {
             this.err_message = "ending word is the same as starting word";
-            return 1;
-        }
-
-        if (start.length() != end.length()) {
-            this.err_message = "length of two words are not equal";
             return 1;
         }
 

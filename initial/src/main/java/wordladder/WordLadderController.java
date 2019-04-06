@@ -8,6 +8,7 @@ import java.util.TreeSet;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -16,8 +17,8 @@ public class WordLadderController {
     private Set<String> dict = loadDict("static/dictionary.txt");
 
     @RequestMapping("/word_ladder")
-    public WordLadder wordladder() {
-        return new WordLadder("word", "lade", dict);
+    public WordLadder wordladder(@RequestParam(value="start", defaultValue="word") String start, @RequestParam(value="end", defaultValue="lade") String end) {
+        return new WordLadder(start, end, dict);
     }
 
 
