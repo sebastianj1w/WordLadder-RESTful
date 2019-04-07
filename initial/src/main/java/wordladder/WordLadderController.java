@@ -39,11 +39,9 @@ public class WordLadderController {
 
             BufferedReader reader = new BufferedReader(new FileReader(dictFile));
             String tempString;
-//        int line = 1;
 
             while ((tempString = reader.readLine()) != null) {
                 wordSet.add(tempString);
-//            line++;
             }
 
             reader.close();
