@@ -22,7 +22,7 @@ public class WordLadderController {
     }
 
 
-    private static Set<String> loadDict(String path) {
+    static Set<String> loadDict(String path) {
         Set<String> wordSet = new TreeSet<>();
         try {
             System.out.println("loading");
