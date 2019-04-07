@@ -40,6 +40,7 @@ Not in progress yet.
 
 ## Unit Test
 
-Unit tests have been added to the `test` branch.
+~~Unit tests have been added to the `test` branch.~~
+Now it has been merged into master, stored in `test` floder
 
 <img src="./imgs/01.png"/>
