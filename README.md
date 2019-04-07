@@ -22,13 +22,7 @@ First, clone or download this repo:
 git clone https://github.com/sebastianj1w/WordLadder-RESTful.git
 ```
 
-After clone or unzip, cd into the `initial` folder:
-
-```powershell
-cd initial
-```
-
-Then, run the project by
+After clone or unzip, run the project by
 
 ```powershell
 ./mvnw spring-boot:run
