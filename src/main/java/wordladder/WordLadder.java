@@ -84,6 +84,46 @@ public class WordLadder {
         return 0;
     }
 
+    public String getStartingWord() {
+        return startingWord;
+    }
+
+    public void setStartingWord(String startingWord) {
+        this.startingWord = startingWord;
+    }
+
+    public String getEndingWord() {
+        return endingWord;
+    }
+
+    public void setEndingWord(String endingWord) {
+        this.endingWord = endingWord;
+    }
+
+    public void setAns(Stack<String> ans) {
+        this.ans = ans;
+    }
+
+    public boolean isFound() {
+        return found;
+    }
+
+    public void setFound(boolean found) {
+        this.found = found;
+    }
+
+    public boolean isErr() {
+        return err;
+    }
+
+    public void setErr(boolean err) {
+        this.err = err;
+    }
+
+    public void setErr_message(String err_message) {
+        this.err_message = err_message;
+    }
+
     public String getStart() {
         return this.startingWord;
     }
