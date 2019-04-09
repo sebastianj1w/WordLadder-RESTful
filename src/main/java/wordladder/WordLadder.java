@@ -8,7 +8,7 @@ public class WordLadder {
     private boolean found = false;
     private boolean err = false;
     private String err_message = "";
-
+    WordLadder() {}
     WordLadder(String start, String end, Set<String> wordSet) {
         this.startingWord = start;
         this.endingWord = end;

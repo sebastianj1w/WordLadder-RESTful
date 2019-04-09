@@ -17,6 +17,7 @@ This repo is for HW3 of SE418, which is a converted version of WordLadder-JAVA
 Now the Phase I has been merged to master.
 
 To run it, do as follows:
+
 First, clone or download this repo:
 
 ```powershell
