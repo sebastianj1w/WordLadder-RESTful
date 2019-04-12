@@ -32,6 +32,15 @@ After clone or unzip, run the project by
 
 ## Phase II
 
+### Spring actuator
+
+Spring actuator adds several production grade services to the application with little effort on your part.
+
+Now the Actuator has been added to the application.
+
+By sending GET requests, we can get information abort the application:
+<img src="./imgs/conditions.png"/>
+
 ### Spring security
 
 Now the application is under the protection of Spring Security.
@@ -44,7 +53,6 @@ Then, we send a POST request containing login information. (note: To avoid CSRF 
 
 After sending the login informations, try again to get a word ladder, and this time we succeded.
 <img src="./imgs/success.png"/>
-
 
 ## Unit Test
 
