@@ -54,6 +54,9 @@ Then, we send a POST request containing login information. (note: To avoid CSRF 
 After sending the login informations, try again to get a word ladder, and this time we succeded.
 <img src="./imgs/success.png"/>
 
+To logout, just sending a GET request, whose path is `/logout`
+<img src="./imgs/logout.png"/>
+
 ## Unit Test
 
 ~~Unit tests have been added to the `test` branch.~~
