@@ -12,20 +12,26 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/word_ladder")
 public class WordLadderController {
 
     private Set<String> dict = loadDict("static/dictionary.txt");
 
-    @RequestMapping("/word_ladder")
+    @RequestMapping("/get")
     public WordLadder wordladder(@RequestParam(value="start", defaultValue="word") String start, @RequestParam(value="end", defaultValue="lade") String end) {
         return new WordLadder(start, end, dict);
+    }
+
+    @RequestMapping("/error")
+    public String wl_error() {
+        return "error";
     }
 
 
     static Set<String> loadDict(String path) {
         Set<String> wordSet = new TreeSet<>();
         try {
-            System.out.println("loading");
+//            System.out.println("loading");
             org.springframework.core.io.Resource resource = new ClassPathResource(path);
             File dictFile = resource.getFile();
 
@@ -34,7 +40,7 @@ public class WordLadderController {
                 return new TreeSet<>();
             }
 
-            System.out.println("dict exits");
+//            System.out.println("dict exits");
 
 
             BufferedReader reader = new BufferedReader(new FileReader(dictFile));
