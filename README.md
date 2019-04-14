@@ -43,15 +43,17 @@ By sending GET requests, we can get information abort the application:
 
 ### Spring security
 
-Now the application is under the protection of Spring Security.
+Now the application is under the protection of Spring Security. Actuator apis need to be authorizied.
 
-Firstly, we try to get a word ladder by GET, but **the request is denied**.
+Firstly, we try to get conditions by GET, but **the request is denied**.
 <img src="./imgs/unauthorized.png"/>
 
 Then, we send a POST request containing login information. (note: To avoid CSRF issues, I disabled csrf protection)
 <img src="./imgs/login.png"/>
+Or we can set the authorization to `Basic Auth`, and set the username and password.'
+<img src="./imgs/basicAuth.png"/>
 
-After sending the login informations, try again to get a word ladder, and this time we succeded.
+After sending the login informations, try again, and this time we succeded.
 <img src="./imgs/success.png"/>
 
 To logout, just sending a GET request, whose path is `/logout`
