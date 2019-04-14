@@ -56,8 +56,12 @@ public class WordLadderControllerTest {
         String start = "this";
         String end = "lade";
 
-        MvcResult result = this.mockMvc.perform(get("/word_ladder").param("start", start).param("end", end)).andDo(print()).andExpect(status().isOk())
-
+        MvcResult result = this.mockMvc.perform(
+                        get("/word_ladder/get")
+                        .param("start", start)
+                        .param("end", end))
+                .andDo(print())
+                .andExpect(status().isOk())
                 .andReturn();
 
         WordLadder wl = new WordLadder(start, end, dict);
