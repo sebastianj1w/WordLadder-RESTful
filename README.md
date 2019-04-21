@@ -1,5 +1,6 @@
 # WordLadder-RESTful
 
+***Note: the newest part(TASK II) is at the end of this md file***
 This repo is for HW3 of SE418, which is a converted version of WordLadder-JAVA
 
 ## Requirements
@@ -66,3 +67,42 @@ To logout, just sending a GET request, whose path is `/logout`
 Now it has been merged into master, stored in `test` floder
 
 <img src="./imgs/01.png"/>
+
+## Performance
+
+I used `JMeter`, `Prometheus` and `Visual VM` to mesure the resource comsumption of my application.
+
+Firstly, run the application and tools, here is the initial status of things.
+
+<img src="./imgs/visualvm1.png"/>
+<img src="./imgs/prometheus1.png"/>
+<img src="./imgs/prometheus2.png"/>
+
+We can see that the resource comsumption is in a low rate because there is no requests.
+
+Then, send requests by JMeter:
+<img src="./imgs/jmeter1.png"/>
+I set the Number ot Thread to 100 and loop for 10 times, and here are the performance result:
+<img src="./imgs/visualvm2.png"/>
+<img src="./imgs/visualvm3.png"/>
+<img src="./imgs/prometheus3.png"/>
+<img src="./imgs/prometheus4.png"/>
+Clearly the comsuption is large. The CPU usage is nearly 100% and memory usage is up to about 750MB. The garbage collection works so the usage of memory is changing fast.
+
+This time we made the number of thread smaller, which represents 30 user do get method for 5 times.
+<img src="./imgs/jmeter2.png"/>
+And here is the result:
+<img src="./imgs/visualvm4.png"/>
+<img src="./imgs/prometheus5.png"/>
+<img src="./imgs/prometheus6.png"/>
+The CPU usage is still nearly 100%, and the memory usage is still up to 700MB, so this is still to heavy for the application and my laptop. But we can see the running time is much shorter due to less requests.
+
+Lastly I tried a much smaller thread pool.
+<img src="./imgs/jmeter3.png"/>
+And here is the result:
+<img src="./imgs/visualvm5.png"/>
+<img src="./imgs/prometheus7.png"/>
+<img src="./imgs/prometheus8.png"/>
+According to the charts, we can see the CPU usage is lower than 50%, the running time is very short and the memory usage is much lower.
+
+By comparing three different situations, we can see that resource consumption is positively correlated with the number of requests and concurrency.
