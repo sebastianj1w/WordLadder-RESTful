@@ -2,6 +2,8 @@
 
 **Note: the newest part(TASK III) is at the end of this md file**
 
+[***Click here to jump to the TASK III***](#anchor)
+
 This repo is for HW3 of SE418, which is a converted version of WordLadder-JAVA
 
 ## Requirements
@@ -108,8 +110,8 @@ According to the charts, we can see the CPU usage is lower than 50%, the running
 
 By comparing three different situations, we can see that resource consumption is positively correlated with the number of requests and concurrency.
 
-## Dockerize
-
+## Dockerize    
+<span id = "anchor"></span>
 I dockerized this application by build an image.
 
 ### How to use the image
