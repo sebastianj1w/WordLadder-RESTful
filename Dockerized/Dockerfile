@@ -6,7 +6,7 @@
 FROM ubuntu
 
 # File Author / Maintainer
-MAINTAINER Sebastianj1w
+MAINTAINER sebastianj1w
 
 # Add jdk and application to the image
 ADD WordLadder.jar /Application/WordLadder.jar

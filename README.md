@@ -9,7 +9,7 @@ This repo is for HW3 of SE418, which is a converted version of WordLadder-JAVA
 1. Convert HW1 of SE418 to a RESTful service, using Java, Unit test, Github and Maven/Gradle.
 
 2. Phase I: Spring Boot / Git workflow
-
+8081
 3. Phase II: Spring Actuator / *Spring Security
 
 ## Phase I
