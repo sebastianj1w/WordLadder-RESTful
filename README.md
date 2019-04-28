@@ -110,8 +110,10 @@ According to the charts, we can see the CPU usage is lower than 50%, the running
 
 By comparing three different situations, we can see that resource consumption is positively correlated with the number of requests and concurrency.
 
-## Dockerize    
 <span id = "anchor"></span>
+
+## Dockerize    
+
 I dockerized this application by build an image.
 
 ### How to use the image
@@ -139,4 +141,4 @@ The Dockerfile to bulid this image is uploaded to `/Dockerized/Dockerfile`. Note
 ### Dockerhub
 
 The dockerhub repo for TASK III is sebastianj1w/wordladder-java:
-https://cloud.docker.com/repository/docker/sebastianj1w/wordladder-java
+https://hub.docker.com/r/sebastianj1w/wordladder-java
