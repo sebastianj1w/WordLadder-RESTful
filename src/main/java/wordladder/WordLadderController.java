@@ -1,11 +1,10 @@
 package wordladder;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.*;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.apache.el.stream.Stream;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -33,17 +32,18 @@ public class WordLadderController {
         try {
 //            System.out.println("loading");
             org.springframework.core.io.Resource resource = new ClassPathResource(path);
-            File dictFile = resource.getFile();
+            InputStream in = resource.getInputStream();
+//            File dictFile = resource.getFile();
 
-            if (!dictFile.exists()) {
-                System.out.println("dict not exits");
-                return new TreeSet<>();
-            }
+//            if (!in.available()) {
+//                System.out.println("dict not exits");
+//                return new TreeSet<>();
+//            }
 
 //            System.out.println("dict exits");
 
 
-            BufferedReader reader = new BufferedReader(new FileReader(dictFile));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(in));
             String tempString;
 //        int line = 1;
 

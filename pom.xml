@@ -62,6 +62,7 @@
 
 
     <build>
+        <finalName>WordLadder</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

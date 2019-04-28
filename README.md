@@ -1,6 +1,7 @@
 # WordLadder-RESTful
 
-***Note: the newest part(TASK II) is at the end of this md file***
+**Note: the newest part(TASK III) is at the end of this md file**
+
 This repo is for HW3 of SE418, which is a converted version of WordLadder-JAVA
 
 ## Requirements
@@ -106,3 +107,29 @@ And here is the result:
 According to the charts, we can see the CPU usage is lower than 50%, the running time is very short and the memory usage is much lower.
 
 By comparing three different situations, we can see that resource consumption is positively correlated with the number of requests and concurrency.
+
+## Dockerize
+
+I dockerized this application by build an image.
+
+### How to use the image
+
+I pushed it to the dockerhub, to use the image, do as follows.
+
+1. Get the image by pull
+
+```
+docker pull sebastianj1w/wordladder-java:latest
+```
+
+2. Run the image 
+
+```
+docker run -d -p {port}:8081 sebastianj1w/wordladder-java
+```
+
+Then the containner will run at the background, to see status of it you can use `docker ps`
+
+### Dockerfile
+
+The Dockerfile to bulid this image is uploaded to `/Dockerized/Dockerfile`. Notes in the Dockerfile will describe every command's effect.
