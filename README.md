@@ -133,3 +133,8 @@ Then the containner will run at the background, to see status of it you can use 
 ### Dockerfile
 
 The Dockerfile to bulid this image is uploaded to `/Dockerized/Dockerfile`. Notes in the Dockerfile will describe every command's effect.
+
+### Dockerhub
+
+The dockerhub repo for TASK III is sebastianj1w/wordladder-java:
+https://cloud.docker.com/repository/docker/sebastianj1w/wordladder-java
